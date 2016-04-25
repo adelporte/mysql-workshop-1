@@ -1,0 +1,7 @@
+CREATE DATABASE Hotel;
+
+CREATE TABLE Rooms (RoomsId INT AUTO_INCREMENT PRIMARY KEY, amountOfGuests INT, typeOfRoom ENUM("guestRoom", "janitorCloset", "laundryRoom", "gym", "reception"), privateKitchen BOOL, carpets BOOL, reservedFromTo DATETIME);
+
+CREATE TABLE Floors (FloorsId INT AUTO_INCREMENT PRIMARY KEY, amountOfWindows INT, FOREIGN KEY (RoomsId) REFERENCES Rooms(RoomsId));
+
+CREATE TABLE Bookings (FOREIGN KEY (RoomsId) REFERENCES Rooms(RoomsId), FOREIGN KEY (FloorsId) REFERENCES Floors(FloorsId), reservation DATETIME);
