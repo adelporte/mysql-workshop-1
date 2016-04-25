@@ -1,0 +1,25 @@
+rooster: id INT, age.
+hen: id INT, age.
+chicks: id INT, age.
+
+chicks coming to age: 
+
+1 table chicken with id, type of chicken ENUM, when born, when died.
+
+
+CREATE DATABASE Chicks;
+
+USE Chicks;
+
+CREATE TABLE Chicken (id INT AUTO_INCREMENT PRIMARY KEY, type ENUM("chick", "hen", "rooster"), dateOfBirth DATE, dateOfDeath DATE);
+
+DESCRIBE Chicken;
+
++-------------+-------------------------------+------+-----+---------+----------------+
+| Field       | Type                          | Null | Key | Default | Extra          |
++-------------+-------------------------------+------+-----+---------+----------------+
+| id          | int(11)                       | NO   | PRI | NULL    | auto_increment |
+| type        | enum('chick','hen','rooster') | YES  |     | NULL    |                |
+| dateOfBirth | date                          | YES  |     | NULL    |                |
+| dateOfDeath | date                          | YES  |     | NULL    |                |
++-------------+-------------------------------+------+-----+---------+----------------+
