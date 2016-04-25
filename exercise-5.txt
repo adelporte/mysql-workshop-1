@@ -1,0 +1,9 @@
+USE decodemtl_addressbook;
+
+CREATE TABLE Account (names CHAR);
+
+CREATE TABLE AddressBook (number INT(10));
+
+CREATE TABLE Entry (id INT);
+
+CREATE TABLE Test (test CHAR);
