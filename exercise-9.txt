@@ -1,12 +1,3 @@
-rooster: id INT, age.
-hen: id INT, age.
-chicks: id INT, age.
-
-chicks coming to age: 
-
-1 table chicken with id, type of chicken ENUM, when born, when died.
-
-
 CREATE DATABASE Chicks;
 
 USE Chicks;
